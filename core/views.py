@@ -19,7 +19,7 @@ def contact_us(request):
         if form.is_valid():
             # Here, you can handle sending an email or saving to DB
             messages.success(request, "Thank you for reaching out! We will get back to you shortly.")
-            return redirect('contact_us')
+            return redirect('contact')
     else:
         form = ContactForm()
     return render(request, 'contact.html', {'form': form})
