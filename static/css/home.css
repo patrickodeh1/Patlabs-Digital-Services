@@ -238,16 +238,16 @@ footer {
     max-width: 800px;
     margin: 3rem auto 5rem;
     padding: 2rem 1.5rem;
-    background-color: #0f172a;
+    background-color: #ffffff;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    color: #cbd5e1;
+    color: #03172e;
     font-size: 1.1rem;
     line-height: 1.6;
 }
 
 .about-us h2 {
-    color: #38bdf8;
+    color: #03293a;
     font-weight: 700;
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
