@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Our Services – Soft Tech{% endblock %}
+
+{% block content %}
+<section class="services about-us">
+  <h2>Our Services</h2>
+  <div class="services-grid">
+
+    <div class="service-item">
+      <img src="{% static 'images/project4.png' %}" alt="Website Development Icon" class="service-icon"/>
+      <div class="service-content">
+        <h3>Website Development</h3>
+        <p>Crafting responsive, user-friendly, and SEO-optimized websites that help you establish a strong online presence.</p>
+        <button class="btn-quote" onclick="location.href='{% url 'get_quote' %}?service=Website Development'">Get a Quote</button>
+      </div>
+    </div>
+
+    <div class="service-item">
+      <img src="{% static 'images/project3.png' %}" alt="Mobile Apps Icon" class="service-icon"/>
+      <div class="service-content">
+        <h3>Mobile Applications</h3>
+        <p>Designing and developing high-performance mobile apps tailored for iOS and Android platforms.</p>
+        <button class="btn-quote" onclick="location.href='{% url 'get_quote' %}?service=Website Development'">Get a Quote</button>
+      </div>
+    </div>
+
+    <div class="service-item">
+      <img src="{% static 'images/project5.png' %}" alt="E-commerce Icon" class="service-icon"/>
+      <div class="service-content">
+        <h3>E-commerce Solutions</h3>
+        <p>Building secure and scalable online stores with seamless shopping experiences to boost your sales.</p>
+        <button class="btn-quote" onclick="location.href='{% url 'get_quote' %}?service=Website Development'">Get a Quote</button>
+      </div>
+    </div>
+
+    <div class="service-item">
+      <img src="{% static 'images/project1.png' %}" alt="API Development Icon" class="service-icon"/>
+      <div class="service-content">
+        <h3>API Development & Integration</h3>
+        <p>Creating robust APIs to connect your software systems and enable smooth data exchange.</p>
+        <button class="btn-quote" onclick="location.href='{% url 'get_quote' %}?service=Website Development'">Get a Quote</button>
+      </div>
+    </div>
+
+    <div class="service-item">
+      <img src="{% static 'images/project2.png' %}" alt="Hotel Management Icon" class="service-icon"/>
+      <div class="service-content">
+        <h3>Hotel Management Software</h3>
+        <p>Providing customized solutions to streamline booking, inventory, and operations for hotels.</p>
+        <button class="btn-quote" onclick="location.href='{% url 'get_quote' %}?service=Website Development'">Get a Quote</button>
+      </div>
+    </div>
+
+    <div class="service-item">
+      <img src="{% static 'images/project5.png' %}" alt="CMS Icon" class="service-icon"/>
+      <div class="service-content">
+        <h3>Content Management Systems (CMS)</h3>
+        <p>Developing easy-to-use CMS platforms so you can manage your digital content effortlessly.</p>
+        <button class="btn-quote" onclick="location.href='{% url 'get_quote' %}?service=Website Development'">Get a Quote</button>
+      </div>
+    </div>
+
+    <div class="service-item">
+      <img src="{% static 'images/project5.png' %}" alt="Hospital & School Management Icon" class="service-icon"/>
+      <div class="service-content">
+        <h3>Management Software for Hospitals & Schools</h3>
+        <p>Delivering tailored software solutions for efficient administration, scheduling, and record keeping.</p>
+        <button class="btn-quote" onclick="location.href='{% url 'get_quote' %}?service=Website Development'">Get a Quote</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+{% endblock %}
