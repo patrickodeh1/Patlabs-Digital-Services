@@ -1,14 +1,14 @@
-# 🧠 Soft Tech – Smart Digital Solutions for Modern Businesses
+# 🧠 Patlabs Digital Services – Smart Digital Solutions for Modern Businesses
 
-This repository contains the source code for **Soft Tech**, a Django-powered web application designed to showcase digital services and solutions for businesses of all sizes. From startups to enterprises, Soft Tech offers tailored web and software development services to help clients innovate, scale, and lead in the digital age.
+This repository contains the source code for **Patlabs Digital Services **, a Django-powered web application designed to showcase digital services and solutions for businesses of all sizes. From startups to enterprises, Patlabs Digital Services  offers tailored web and software development services to help clients innovate, scale, and lead in the digital age.
 
-**🌐 Live Site:** [soft-tech.onrender.com](https://soft-tech.onrender.com)
+**🌐 Live Site:** [patlabs-digital-services.onrender.com](https://patlabs-digital-services.onrender.com)
 
 ---
 
 ## ✨ Overview
 
-Soft Tech is a professional services website built with Django, featuring:
+Patlabs Digital Services  is a professional services website built with Django, featuring:
 
 - 🖥️ Clean, responsive UI with smooth navigation
 - 🧩 Modular sections for services, industries, and projects
@@ -30,9 +30,8 @@ Soft Tech is a professional services website built with Django, featuring:
 
 ## 📁 Project Structure
 
-soft-tech/
-├── softtech/ # Django project settings and URLs
-├── services/ # Django app for services and industries
+patlabs-digital-services/
+├── patlabs_digital_services/ # Django project settings and URLs
 │ ├── templates/
 │ └── static/
 ├── manage.py
@@ -48,8 +47,8 @@ To run the project locally:
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/patrickodeh1/soft-tech.git
-cd soft-tech
+git clone https://github.com/patrickodeh1/Patlabs-Digital-Services.git
+cd Patlabs-Digital-Services
 Create a virtual environment and install dependencies
 ```
 ```bash
