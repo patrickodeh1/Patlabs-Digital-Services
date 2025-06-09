@@ -21,7 +21,7 @@ def contact_us(request):
         if form.is_valid():
             cd = form.cleaned_data
             send_mail(
-                subject=f"[Contact Form] {cd ['Subject']}",
+                subject=f"[Contact Form] {cd ['subject']}",
                 message=(
                     f"Name: {cd['name']}\n"
                     f"Email: {cd['email']}\n\n"
