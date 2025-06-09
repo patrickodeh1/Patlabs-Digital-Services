@@ -3,6 +3,8 @@ from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.contrib import messages
 from .forms import QuoteRequestForm, ContactForm
+from django.core.mail import send_mail
+from django.conf import settings
 
 
 class HomePageView(TemplateView):
@@ -17,7 +19,18 @@ def contact_us(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            # Here, you can handle sending an email or saving to DB
+            cd = form.cleaned_data
+            send_mail(
+                subject=f"[Contact Form] {cd ['Subject']}",
+                message=(
+                    f"Name: {cd['name']}\n"
+                    f"Email: {cd['email']}\n\n"
+                    f"Message:\n{cd['message']}"
+                ),
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                recipient_list=['patlabsdigitalservices@gmail.com'],
+                fail_silently=False,
+            )
             messages.success(request, "Thank you for reaching out! We will get back to you shortly.")
             return redirect('contact')
     else:
@@ -33,12 +46,23 @@ def get_quote(request):
     if request.method == 'POST':
         form = QuoteRequestForm(request.POST)
         if form.is_valid():
-            # Here you could send email, save to DB, or process the data
-            # For now, just display a success message and redirect
+            cd = form.cleaned_data
+            send_mail(
+                subject=f"[Quote Request] {cd['service']}",
+                message=(
+                    f"Name: {cd['name']}\n"
+                    f"Email: {cd['email']}\n"
+                    f"Phone: {cd.get('phone', 'N/A')}\n"
+                    f"Company: {cd.get('company', 'N/A')}\n\n"
+                    f"Message:\n{cd['message']}"
+                ),
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                recipient_list=['patlabsdigitalservices@gmail.com'],
+                fail_silently=False,
+            )
             messages.success(request, "Thank you for your request! We'll get back to you shortly.")
             return redirect(reverse('get_quote'))
     else:
-        # If service is passed as GET param (e.g., ?service=Website Development)
         initial_service = request.GET.get('service', '')
         form = QuoteRequestForm(initial={'service': initial_service})
 
